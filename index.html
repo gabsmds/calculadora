@@ -1,43 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Juros Simples</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Juros compostos</title>
+    <link rel="stylesheet" href="calc.css">
 
 </head>
 <body>
-    <main>
-        <div class="container"> 
+        <div class="geral"> 
 
-            <div class="title">Calculadora Juros Simples</div>
-            <div class="input">
-                <label>Nome: </label>
-                <input type="text" id="nome">
+                <h1>Como fazer um cálculo de juros simples?</h1>
+            <div class="texto">
+                <p>Juros simples é um conceito financeiro utilizado para calcular o valor dos juros sobre um capital inicial em um determinado período de tempo. Diferente dos juros compostos, onde os juros são acumulados e calculados sobre o saldo acumulado, nos juros simples, os juros são calculados apenas sobre o valor principal.</p>
+                <p>J=C*I*T</p>
+                <p>Em que J é o juro, C é o capital, I é a taxa de juro e T é o tempo.</p>
             </div>
 
-            <div class="input">
-                <label>Taxa de juros: </label>
-                <input type="number" id="taxa">
+            <button onclick="mostrarIframe()">Calcular juros</button>
+    
+            <div class="calculadora" id="iframeContainer" style="display:none;">
+                <iframe src="index.html" width="600" height="800"></iframe>
             </div>
 
-            <div class="input">
-                <label>Capital: </label>
-                <input type="number" id="capital">
-            </div>
-
-            <div class="input">
-                <label>Período de tempo em meses: </label>
-                <input type="number" id="tempo">
-            </div>
-
-            <button id="calcular">Calcular</button>
-
-            <div class="result" id="resultado">RESULTADO DO CÁLCULO</div>
-
+            <script>
+                function mostrarIframe() {
+                    document.getElementById('iframeContainer').style.display = 'block';
+                }
+            </script>
         </div>
-    </main>
-    <script src="juros.js"></script>
 </body>
 </html>
